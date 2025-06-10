@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "m-reguler";
+    src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "m-medium";
+    src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "m-semibold";
+    src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "m-bold";
+    src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+@theme {
+    --font-m-reguler: "m-reguler", "times ew roman";
+    --font-m-medium: "m-medium", "times ew roman";
+    --font-m-semibold: "m-semibold", "times ew roman";
+    --font-m-bold: "m-bold", "times ew roman";
+}
