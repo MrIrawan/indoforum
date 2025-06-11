@@ -6,7 +6,7 @@ export default function LoginUser() {
             classname={'w-full h-screen flex items-center justify-center'}
             containerClass={'h-[800px]'}
         >
-            <div className="flex justify-between h-full shadow-lg">
+            <div className="flex justify-between h-full lg:shadow-lg">
 
                 {/* form login user */}
                 <div className="w-full lg:w-1/2 flex justify-center items-center">
@@ -37,11 +37,11 @@ export default function LoginUser() {
                                     className="border py-2.5 px-2 font-m-reguler text-base text-black focus:outline-0 focus:ring focus:ring-secondary-color"
                                 />
                             </div>
-                            <button className="bg-primary-foreground py-2.5 px-3">
+                            <button className="bg-secondary-color py-2.5 px-3">
                                 <p className="text-lg font-m-medium text-white">Masuk</p>
                             </button>
                         </form>
-                        <p className="text-base font-m-medium leading-relaxed mt-10">belum mendaftar di indoforum? <a href="/daftar" className="text-secondary-color">daftar di sini.</a></p>
+                        <p className="text-base font-m-medium leading-relaxed mt-10">belum mendaftar di indoforum? <a href="/daftar" className="text-primary-color">daftar di sini.</a></p>
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 hidden lg:block">
