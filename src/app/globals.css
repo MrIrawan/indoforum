@@ -22,4 +22,12 @@
     --font-m-medium: "m-medium", "times ew roman";
     --font-m-semibold: "m-semibold", "times ew roman";
     --font-m-bold: "m-bold", "times ew roman";
+
+    --color-pimary-color: #7A1CAC;
+    --color-secondary-color: #AD49E1;
+    --color-primary-foreground: #2E073F;
+    --color-secondary-foreground: #EBD3F8;
+
+    --color-text-color: #ffffff;
+    --color-text-foregound: #000000;
 }
