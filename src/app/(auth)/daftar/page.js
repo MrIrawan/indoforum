@@ -34,30 +34,6 @@ export default function RegisterUser() {
                                     />
                                 </div>
                             </div>
-                            {/* form group gender */}
-                            <div className="flex flex-wrap gap-2">
-                                <label className="text-base w-full font-m-semibold text-black">Jenis Kelamin</label>
-                                <div className="flex items-center gap-2 mr-2">
-                                    <input 
-                                        type="radio" 
-                                        id="gender_user" 
-                                        name="gender_user" 
-                                        value="male"
-                                        className="border py-2.5 px-2 font-m-reguler text-base text-black focus:outline-0 focus:ring focus:ring-secondary-color placeholder:font-m-reguler"
-                                    />
-                                    <label className="text-base font-m-semibold text-black">Laki-laki</label>
-                                </div>
-                                <div className="flex items-center gap-2 ml-2">
-                                    <input 
-                                        type="radio" 
-                                        id="gender_user" 
-                                        name="gender_user" 
-                                        value="female"
-                                        className="border py-2.5 px-2 font-m-reguler text-base text-black focus:outline-0 focus:ring focus:ring-secondary-color placeholder:font-m-reguler"
-                                    />
-                                    <label className="text-base font-m-semibold text-black">Perempuan</label>
-                                </div>
-                            </div>
                             {/* email and password */}
                             <div className="flex flex-col gap-2">
                                 <label className="text-base font-m-bold text-black" htmlFor="email_user">Email</label>
@@ -93,7 +69,7 @@ export default function RegisterUser() {
                                 <p className="text-lg font-m-medium text-white">Masuk</p>
                             </button>
                         </form>
-                        <p className="text-base font-m-medium leading-relaxed mt-10">belum mendaftar di indoforum? <a href="/daftar" className="text-primary-color">daftar di sini.</a></p>
+                        <p className="text-base text-center font-m-medium leading-relaxed mt-10">sudah punya akun indoforum? <a href="/masuk" className="text-primary-color">masuk di sini.</a></p>
                     </div>
                 </div>
                 <div className="w-full hidden lg:w-1/2 lg:block">

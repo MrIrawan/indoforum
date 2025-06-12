@@ -2,13 +2,7 @@ import SectionSite from "@/components/Section";
 
 export default function LoginUser() {
     return (
-        <SectionSite 
-            classname={'w-full h-screen flex items-center justify-center'}
-            containerClass={'h-[800px]'}
-        >
-            <div className="flex justify-between h-full lg:shadow-lg">
-
-                {/* form login user */}
+        <>
                 <div className="w-full lg:w-1/2 flex justify-center items-center">
                     <div className="w-fit flex flex-col">
                         <div className="flex flex-col justify-between mb-8">
@@ -52,7 +46,6 @@ export default function LoginUser() {
                         />
                     </div>
                 </div>
-            </div>
-        </SectionSite>
+        </>
     )
 }
