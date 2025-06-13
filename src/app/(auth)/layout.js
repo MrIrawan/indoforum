@@ -5,7 +5,7 @@ export default function AuthLayout({ children }) {
         <>
             <SectionSite 
                 classname={'w-full h-screen flex items-center justify-center'}
-                containerClass={'h-[800px]'}
+                containerClass={'h-[800px] w-full container mx-auto'}
             >
                 <div className="flex justify-between h-full lg:shadow-lg">
                     { children }
