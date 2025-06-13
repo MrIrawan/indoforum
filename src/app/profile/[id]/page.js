@@ -65,7 +65,7 @@ export default function UserProfile() {
                     </ul>
                 </div>
                 {/* user activity info (post and forums) */}
-                <div className="w-full pt-6 flex flex-col justify-between items-center gap-4">
+                <div className="w-full pt-6 pb-25 flex flex-col justify-between items-center gap-4">
                     <div className="flex flex-col justify-between gap-2 w-full h-40 p-3 ring-2 ring-gray-400 rounded-lg">
                         <h2 className="text-2xl font-m-bold m-0 capitalize">your current post</h2>
                         <p className="text-4xl font-m-semibold">0</p>
