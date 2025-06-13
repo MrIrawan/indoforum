@@ -1,4 +1,4 @@
-import SectionSite from "@/components/Section";
+import SectionSite from "@/components/layout/Section";
 
 export default function LoginUser() {
     return (

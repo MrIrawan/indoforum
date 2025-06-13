@@ -1,20 +1,18 @@
-import SectionSite from "@/components/Section"
-import { HomeIcon, SettingsIcon, LogOutIcon } from "lucide-react"
+import SectionSite from "@/components/layout/Section"
+import PostButton from "@/components/ui/button/PostButton"
+import SettingsButton from "@/components/ui/button/SettingsButton"
+import HomeButton from "@/components/ui/button/HomeButton"
+import LogoutButton from "@/components/ui/button/LogoutButton"
 
 export default function UserProfileLayout({ children }) {
     return (
         <SectionSite containerClass={'lg:mx-auto lg:container'}>
             { children }
             <footer className="w-full bg-white h-16 fixed bottom-0 flex items-center justify-around border-t border-t-gray-300">
-                <span className="w-fit">
-                    <HomeIcon className="w-6 h-6" />
-                </span>
-                <span className="w-fit">
-                    <SettingsIcon className="w-6 h-6" />
-                </span>
-                <span className="w-fit">
-                    <LogOutIcon className="w-6 h-6" />
-                </span>
+                <HomeButton />
+                <PostButton />
+                <SettingsButton />
+                <LogoutButton />
             </footer>
         </SectionSite>
     )
