@@ -1,14 +1,13 @@
 import Image from "next/image"
 import indoforumLogo from "../../../public/images/indoforum-logo.svg"
-import HomeButton from "@/components/ui/button/HomeButton"
-import ForumsButton from "@/components/ui/button/ForumsButton"
-import { Search, MessageSquareTextIcon } from "lucide-react"
+import Button from "@/components/ui/button/Buttons"
+import { Search } from "lucide-react"
 
 export default function PostLayout({ children }) {
     return (
         <>
             <header className="w-full">
-                <div className="w-full h-16 bg-white px-3 py-3 flex items-center gap-3 border-b">
+                <div className="w-full h-16 bg-white px-3 py-3 flex items-center gap-3">
                     <div className="w-9 h-9 overflow-hidden">
                         <Image 
                             src={indoforumLogo}
@@ -22,27 +21,39 @@ export default function PostLayout({ children }) {
                         </button>
                     </form>
                 </div>
-                <nav className="w-full h-15 bg-secondary-foreground px-3">
+                <nav className="w-full h-12 bg-primary-color px-3">
                     <ul className="w-full h-full flex items-center gap-3 justify-around">
                         <li>
-                            <a href="/post">
-                                <HomeButton />
-                            </a>
+                            <Button 
+                                link="/post"
+                                ringColor="white"
+                            >
+                                <Button.home bgColor="white"/>
+                            </Button>
                         </li>
                         <li>
-                            <a href="/forums">
-                                <ForumsButton />
-                            </a>
+                            <Button 
+                                link="/forums"
+                                ringColor="white"
+                            >
+                                <Button.forums bgColor="white"/>
+                            </Button>
                         </li>
                         <li>
-                            <a href="/post">
-                                <HomeButton />
-                            </a>
+                            <Button 
+                                link="/friends"
+                                ringColor="white"
+                            >
+                                <Button.users bgColor="white"/>
+                            </Button>
                         </li>
                         <li>
-                            <a href="/profile/123">
-                                <HomeButton />
-                            </a>
+                            <Button 
+                                link="/profile"
+                                ringColor="white"
+                            >
+                                <Button.profile bgColor="white"/>
+                            </Button>
                         </li>
                     </ul>
                 </nav>
