@@ -49,7 +49,7 @@ export default function PostLayout({ children }) {
                         </li>
                         <li>
                             <Button 
-                                link="/profile"
+                                link="/profile/123"
                                 ringColor="white"
                             >
                                 <Button.profile bgColor="white"/>
