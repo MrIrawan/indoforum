@@ -71,18 +71,10 @@ function ProfileActivity() {
     return (
                 <div className="w-full pt-6 pb-25 flex flex-col justify-between items-center gap-4">
                     <div className="flex flex-col justify-between gap-2 w-full h-40 p-3 ring-2 ring-gray-400 rounded-lg">
-                        <h2 className="text-2xl font-m-bold m-0 capitalize">your current post</h2>
-                        <p className="text-4xl font-m-semibold">0</p>
-                        <a href="#" className="w-full flex items-center gap-2">
-                            <p className="text-base font-m-medium">lihat riwayat post milikmu</p>
-                            <ArrowUpRight className="w-5 h-5" />
-                        </a>
-                    </div>
-                    <div className="flex flex-col justify-between gap-2 w-full h-40 p-3 ring-2 ring-gray-400 rounded-lg">
                         <h2 className="text-2xl font-m-bold m-0 capitalize">joined forums</h2>
                         <p className="text-4xl font-m-semibold">0</p>
                         <a href="#" className="w-full flex items-center gap-2">
-                            <p className="text-base font-m-medium">lihat daftar forum buatanmu</p>
+                            <p className="text-base font-m-medium">lihat daftar forum yang kamu ikuti</p>
                             <ArrowUpRight className="w-5 h-5" />
                         </a>
                     </div>
@@ -90,7 +82,7 @@ function ProfileActivity() {
                         <h2 className="text-2xl font-m-bold m-0 capitalize">forums created</h2>
                         <p className="text-4xl font-m-semibold">0</p>
                         <a href="#" className="w-full flex items-center gap-2">
-                            <p className="text-base font-m-medium">lihat daftar forum yang kamu ikuti</p>
+                            <p className="text-base font-m-medium">lihat daftar forum buatanmu</p>
                             <ArrowUpRight className="w-5 h-5" />
                         </a>
                     </div>
