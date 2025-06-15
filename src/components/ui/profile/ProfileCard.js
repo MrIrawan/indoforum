@@ -67,6 +67,17 @@ function ProfileInfo() {
     )
 }
 
+function ProfileDescription({ name = "", text = "" }) {
+    return (
+        <div className="w-full pt-6">
+            <div className="flex flex-col">
+                <h2 className="text-2xl font-m-bold">{ name }</h2>
+                <p className="text-base font-m-medium">{ text }</p>
+            </div>
+        </div>
+    )
+}
+
 function ProfileActivity() {
     return (
                 <div className="w-full pt-6 pb-25 flex flex-col justify-between items-center gap-4">
