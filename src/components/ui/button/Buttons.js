@@ -8,12 +8,23 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-export default function Button({ children, ringColor = "black", link = "" }) {
+export default function Button({ children, ringColor = "black", link = "", classname = "" }) {
 
     return (
-        <button className={`ring-2 rounded-lg p-1 ring-${ringColor}`}>
-            { link === "" ? children : <Link href={link}>{children}</Link> }
-        </button>
+        <>
+            {link === "" && (
+                <button className={`ring-2 rounded-lg p-1 ring-${ringColor} ${classname}`}>
+                    {children}
+                </button>
+            )}
+            {link !== "" && (
+                <Link href={link}>
+                    <button className={`ring-2 rounded-lg p-1 ring-${ringColor} ${classname}`}>
+                        {children}
+                    </button>
+                </Link>
+            )}
+        </>
     )
 
 }

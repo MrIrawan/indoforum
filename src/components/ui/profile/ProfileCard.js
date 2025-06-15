@@ -3,6 +3,7 @@ import indoforumImage from "../../../../public/images/mosaic-indoforum.png"
 import fluidImage from "../../../../public/images/fluid.jpg"
 import FollowButton from "../button/FollowButton"
 import MessageButton from "../button/MessageButton"
+import Button from "../button/Buttons"
 import { 
     MapPin, 
     Mail,
@@ -28,9 +29,14 @@ function ProfileNameAndJob() {
                         <h2 className="text-2xl font-m-bold capitalize">Farrel Irawan</h2>
                         <p className="text-sm font-m-medium">UI/UX Designer & Frontend Developer</p>
                     </div>
-                    <div className="flex gap-3">
-                        <FollowButton />
-                        <MessageButton />
+                    <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 w-fit">
+                            <FollowButton />
+                            <MessageButton />
+                        </div>
+                        <Button classname="w-full flex items-center justify-center h-9">
+                            <Button.settings />
+                        </Button>
                     </div>
                 </div>
     )
