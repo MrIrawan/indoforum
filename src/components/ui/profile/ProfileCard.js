@@ -4,6 +4,7 @@ import fluidImage from "../../../../public/images/fluid.jpg"
 import FollowButton from "../button/FollowButton"
 import MessageButton from "../button/MessageButton"
 import Button from "../button/Buttons"
+import ReadMore from "../ReadMore"
 import { 
     MapPin, 
     Mail,
@@ -70,9 +71,9 @@ function ProfileInfo() {
 function ProfileDescription({ name = "", text = "" }) {
     return (
         <div className="w-full pt-6">
-            <div className="flex flex-col">
-                <h2 className="text-2xl font-m-bold">{ name }</h2>
-                <p className="text-base font-m-medium">{ text }</p>
+            <div className="flex flex-col gap-3">
+                <h2 className="text-2xl font-m-bold">{ name }'s About</h2>
+                <ReadMore text={ text } />
             </div>
         </div>
     )
@@ -124,3 +125,4 @@ function BannerImageAndProfileImage() {
 ProfileCard.NameAndJob = ProfileNameAndJob;
 ProfileCard.ProfileInfo = ProfileInfo;
 ProfileCard.ProfileActivity = ProfileActivity;
+ProfileCard.ProfileDescription = ProfileDescription;
