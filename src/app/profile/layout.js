@@ -8,12 +8,6 @@ export default function UserProfileLayout({ children }) {
     return (
         <SectionSite containerClass={'lg:mx-auto lg:container'}>
             { children }
-            <footer className="w-full bg-white h-16 fixed bottom-0 flex items-center justify-around border-t border-t-gray-300">
-                <HomeButton />
-                <PostButton />
-                <SettingsButton />
-                <LogoutButton />
-            </footer>
         </SectionSite>
     )
 }
