@@ -1,15 +1,21 @@
+"use client"
+
+import { useState } from "react"
+
 import Image from "next/image"
 import indoforumImage from "../../../../public/images/mosaic-indoforum.png"
 import fluidImage from "../../../../public/images/fluid.jpg"
-import FollowButton from "../button/FollowButton"
-import MessageButton from "../button/MessageButton"
 import Button from "../button/Buttons"
 import ReadMore from "../ReadMore"
 import { 
     MapPin, 
     Mail,
     BriefcaseBusiness,
-    ArrowUpRight
+    ArrowUpRight,
+    SettingsIcon,
+    UserPlusIcon,
+    UserMinusIcon,
+    MessageCircle
 } from "lucide-react"
 
 export default function ProfileCard({ children }) {
@@ -24,6 +30,9 @@ export default function ProfileCard({ children }) {
 }
 
 function ProfileNameAndJob() {
+
+    const [isFollowed, setIsFollowed] = useState(false)
+
     return (
                 <div className="flex flex-col gap-6">
                     <div className="flex flex-col items-start">
@@ -32,14 +41,35 @@ function ProfileNameAndJob() {
                     </div>
                     <div className="flex justify-between gap-3">
                         <div className="flex items-center gap-3 w-fit">
-                            <FollowButton />
-                            <MessageButton />
+                            { isFollowed === true && (
+                                <Button
+                                    buttonStyle="ring-2 w-36 py-1.5 rounded-md flex items-center justify-center gap-2"
+                                >
+                                    <p className="text-base font-m-semibold">unfollow</p>
+                                    <UserMinusIcon className="w-6 h-6" />
+                                </Button>
+                            ) }
+                            { isFollowed === false && (
+                                <Button
+                                    buttonStyle="ring-2 w-36 py-1.5 rounded-md flex items-center justify-center gap-2"
+                                >
+                                    <p className="text-base font-m-semibold">follow</p>
+                                    <UserPlusIcon className="w-6 h-6" />
+                                </Button>
+                            ) }
+                            <Button
+                                buttonStyle="ring-2 w-36 py-1.5 rounded-md flex items-center justify-center gap-2"
+                            >
+                                <p className="text-base font-m-semibold">message</p>
+                                <MessageCircle className="w-6 h-6" />
+                            </Button>
                         </div>
-                        <Button 
-                            classname="w-full flex items-center justify-center"
+                        <Button
                             link="/profile/settings"
+                            buttonStyle="ring-2 w-full rounded-md"
+                            linkStyle="w-full flex items-center justify-center gap-2"
                         >
-                            <Button.settings />
+                            <SettingsIcon className="w-6 h-6" />
                         </Button>
                     </div>
                 </div>
@@ -85,18 +115,26 @@ function ProfileActivity() {
                     <div className="flex flex-col justify-between gap-2 w-full h-40 p-3 ring-2 ring-gray-400 rounded-lg">
                         <h2 className="text-2xl font-m-bold m-0 capitalize">joined forums</h2>
                         <p className="text-4xl font-m-semibold">0</p>
-                        <a href="#" className="w-full flex items-center gap-2">
-                            <p className="text-base font-m-medium">lihat daftar forum yang kamu ikuti</p>
+                        <Button
+                            link="/profile/activity/joined-forums"
+                            buttonStyle="w-full"
+                            linkStyle="w-full flex items-center gap-2"
+                        >
+                            <p className="text-base font-m-medium">lihat daftar forum buatanmu</p>
                             <ArrowUpRight className="w-5 h-5" />
-                        </a>
+                        </Button>
                     </div>
                     <div className="flex flex-col justify-between gap-2 w-full h-40 p-3 ring-2 ring-gray-400 rounded-lg">
                         <h2 className="text-2xl font-m-bold m-0 capitalize">forums created</h2>
                         <p className="text-4xl font-m-semibold">0</p>
-                        <a href="#" className="w-full flex items-center gap-2">
-                            <p className="text-base font-m-medium">lihat daftar forum buatanmu</p>
+                        <Button
+                            link="/profile/activity/forums-created"
+                            buttonStyle="w-full"
+                            linkStyle="w-full flex items-center gap-2"
+                        >
+                            <p className="text-base font-m-medium">lihat daftar forum yang kamu ikuti</p>
                             <ArrowUpRight className="w-5 h-5" />
-                        </a>
+                        </Button>
                     </div>
                 </div>
     )

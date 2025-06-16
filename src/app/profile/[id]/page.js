@@ -1,3 +1,5 @@
+"use client"
+
 import ProfileCard from "@/components/ui/profile/ProfileCard"
 
 export default function UserProfile() {
