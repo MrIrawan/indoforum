@@ -73,7 +73,7 @@ function ProfileDescription({ name = "", text = "" }) {
         <div className="w-full pt-6">
             <div className="flex flex-col gap-3">
                 <h2 className="text-2xl font-m-bold">{ name }'s About</h2>
-                <ReadMore text={ text } />
+                <ReadMore text={ text } textStyle="text-base font-m-medium text-justify" />
             </div>
         </div>
     )
