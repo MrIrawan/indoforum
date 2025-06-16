@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function ReadMore({ text, amountOfWord = 15 }) {
+export default function ReadMore({ text, amountOfWord = 15, textStyle = "" }) {
     const [isReadMore, setIsReadMore] = useState(false);
 
     const splittedText = text.split(" ");
@@ -13,7 +13,7 @@ export default function ReadMore({ text, amountOfWord = 15 }) {
     const endText = splittedText.slice(amountOfWord - 1).join(" ");
 
     return (
-        <p className="text-base font-m-medium text-justify">
+        <p className={`${textStyle}`}>
             {beginText}
             {itCanOverflow && (
                 <>
