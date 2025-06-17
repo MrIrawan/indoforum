@@ -9,7 +9,7 @@ import {
 
 export default function ProfileSettings() {
     return (
-        <div className="w-full flex flex-col gap-6 p-4">
+        <div className="w-full flex flex-col gap-6 px-4 py-2">
             <div className="w-full flex flex-col gap-2">
                 <h2 className="text-2xl font-m-bold capitalize">Profile Settings</h2>
                 <ReadMore 
@@ -18,7 +18,7 @@ export default function ProfileSettings() {
                     textStyle="text-sm font-m-medium text-justify"
                 />
             </div>
-            <div className="www-full">
+            <div className="w-full">
                 <ul className="w-full flex flex-col gap-6">
                     <li>
                         <Button 
