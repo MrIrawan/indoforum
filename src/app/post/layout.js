@@ -1,7 +1,13 @@
 import Image from "next/image"
 import indoforumLogo from "../../../public/images/indoforum-logo.svg"
 import Button from "@/components/ui/button/Buttons"
-import { Search } from "lucide-react"
+import {
+    SearchIcon,
+    HomeIcon,
+    MessageSquareTextIcon,
+    UserRoundIcon,
+    UsersRoundIcon
+} from "lucide-react"
 
 export default function PostLayout({ children }) {
     return (
@@ -28,32 +34,44 @@ export default function PostLayout({ children }) {
                             <Button
                                 buttonStyle="absolute right-2.5 top-1/2 -translate-y-1/2"
                             >
-                                <Search className="w-6 h-6"/>
+                                <SearchIcon className="w-6 h-6"/>
                             </Button>
                         </form>
                     </div>
                 </nav>
             </header>
             <div className="w-full h-10 bg-gray-200">
-                <ul className="w-full flex items-center justify-evenly gap-4 h-full">
+                <ul className="w-full flex items-center justify-between px-10 gap-4 h-full">
                     <li>
-                        <Button>
-                            <p className="text-base font-m-semibold">semua</p>
+                        <Button
+                            link="/post"
+                            buttonStyle="flex items-center gap-2"
+                        >
+                            <HomeIcon className="w-6 h-6"/>
                         </Button>
                     </li>
                     <li>
-                        <Button>
-                            <p className="text-base font-m-semibold">semua</p>
+                        <Button
+                            link="/post"
+                            buttonStyle="flex items-center gap-2"
+                        >
+                            <MessageSquareTextIcon className="w-6 h-6"/>
                         </Button>
                     </li>
                     <li>
-                        <Button>
-                            <p className="text-base font-m-semibold">semua</p>
+                        <Button
+                            link="/post"
+                            buttonStyle="flex items-center gap-2"
+                        >
+                            <UsersRoundIcon className="w-6 h-6"/>
                         </Button>
                     </li>
                     <li>
-                        <Button>
-                            <p className="text-base font-m-semibold">semua</p>
+                        <Button
+                            link="/post"
+                            buttonStyle="flex items-center gap-2"
+                        >
+                            <UserRoundIcon className="w-6 h-6"/>
                         </Button>
                     </li>
                 </ul>
