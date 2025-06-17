@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import indoforumLogo from "../../../public/images/indoforum-logo.svg"
 import Button from "@/components/ui/button/Buttons"
