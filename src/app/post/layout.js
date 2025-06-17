@@ -6,59 +6,59 @@ import { Search } from "lucide-react"
 export default function PostLayout({ children }) {
     return (
         <>
-            <header className="w-full">
-                <div className="w-full h-16 bg-white px-3 py-3 flex items-center gap-3">
-                    <div className="w-9 h-9 overflow-hidden">
+            <header className="w-full h-16">
+                <nav className="lg:container lg:mx-auto h-full flex items-center gap-3 p-4">
+                    <div className="w-fit">
                         <Image 
                             src={indoforumLogo}
                             alt="indoforum-logo"
+                            width={50}
+                            height={50}
                         />
                     </div>
-                    <form className="w-full flex items-center gap-3">
-                        <input type="text" placeholder="Cari di indoforum" className="w-full h-full ring-2 ring-gray-400 font-m-medium rounded-md px-3 py-2 focus:outline-none placeholder:font-m-medium" />
-                        <button type="submit" className="w-10 h-9 flex items-center justify-center ring-2 rounded-lg">
-                            <Search className="w-7 h-7" />
-                        </button>
-                    </form>
-                </div>
-                <nav className="w-full h-12 bg-primary-color px-3">
-                    <ul className="w-full h-full flex items-center gap-3 justify-around">
-                        <li>
-                            <Button 
-                                link="/post"
-                                ringColor="white"
+                    <div className="w-full flex items-center">
+                        <form className="w-full flex items-center relative">
+                            <input 
+                                type="search" 
+                                name="search-col" 
+                                id="search-col" 
+                                className="ring-2 rounded-3xl py-1.5 w-full px-2 font-m-medium overflow-hidden placeholder:font-m-medium"
+                                placeholder="Cari sesuatu..."
+                            />
+                            <Button
+                                buttonStyle="absolute right-2.5 top-1/2 -translate-y-1/2"
                             >
-                                <Button.home bgColor="white"/>
+                                <Search className="w-6 h-6"/>
                             </Button>
-                        </li>
-                        <li>
-                            <Button 
-                                link="/forums"
-                                ringColor="white"
-                            >
-                                <Button.forums bgColor="white"/>
-                            </Button>
-                        </li>
-                        <li>
-                            <Button 
-                                link="/friends"
-                                ringColor="white"
-                            >
-                                <Button.users bgColor="white"/>
-                            </Button>
-                        </li>
-                        <li>
-                            <Button 
-                                link="/profile/123"
-                                ringColor="white"
-                            >
-                                <Button.profile bgColor="white"/>
-                            </Button>
-                        </li>
-                    </ul>
+                        </form>
+                    </div>
                 </nav>
             </header>
-            { children }
+            <div className="w-full h-10 bg-gray-200">
+                <ul className="w-full flex items-center justify-evenly gap-4 h-full">
+                    <li>
+                        <Button>
+                            <p className="text-base font-m-semibold">semua</p>
+                        </Button>
+                    </li>
+                    <li>
+                        <Button>
+                            <p className="text-base font-m-semibold">semua</p>
+                        </Button>
+                    </li>
+                    <li>
+                        <Button>
+                            <p className="text-base font-m-semibold">semua</p>
+                        </Button>
+                    </li>
+                    <li>
+                        <Button>
+                            <p className="text-base font-m-semibold">semua</p>
+                        </Button>
+                    </li>
+                </ul>
+            </div>
+            {children}
         </>
     )
 }
