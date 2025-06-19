@@ -16,7 +16,7 @@ export default function PostPage() {
                                 alt="indoforum-logo"
                                 width={35}
                                 height={35}
-                                className="w-12 h-12 rounded-full"
+                                className="w-11 h-11 rounded-full"
                             />
                             <div className="flex flex-col">
                                 <p className="text-base font-m-semibold">Farrel Irawan</p>

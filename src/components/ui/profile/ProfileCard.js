@@ -6,7 +6,7 @@ import Image from "next/image"
 import indoforumImage from "../../../../public/images/mosaic-indoforum.png"
 import fluidImage from "../../../../public/images/fluid.jpg"
 import Button from "../button/Buttons"
-import ReadMore from "../ReadMore"
+import ReadMore from "../ReadMore/ReadMore"
 import { 
     MapPin, 
     Mail,

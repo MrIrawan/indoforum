@@ -1,4 +1,4 @@
-import ReadMore from "@/components/ui/ReadMore"
+import ReadMore from "@/components/ui/ReadMore/ReadMore"
 import Button from "@/components/ui/button/Buttons"
 import { 
     InfoIcon,
