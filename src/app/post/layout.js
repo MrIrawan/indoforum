@@ -35,11 +35,16 @@ export default function PostLayout({ children }) {
                     </div>
                     {/* users profile icon */}
                     <div className="w-10 h-10 ring-2 rounded-full overflow-hidden">
-                        <Image 
-                            src={fluidImage}
-                            className="w-full h-full object-cover"
-                            alt="user profile icon"
-                        />
+                        <Button
+                            link="/profile/123"
+                            buttonStyle="w-full h-full"
+                        >
+                            <Image 
+                                src={fluidImage}
+                                className="w-full h-full object-cover"
+                                alt="user profile icon"
+                            />
+                        </Button>
                     </div>
                 </nav>
             </header>
