@@ -1,13 +1,62 @@
-import Image from "next/image"
+import Image from "next/image";
+import defaultUserLogo from "../../../../public/images/default.jpeg"
 
-export default function Avatar({ src, alt, classname = "" }) {
+export default function Avatar(
+    {
+        avatarImg = "",
+        altImg = "avatar image alt",
+        avatarSize = "default",
+        ring = true,
+        ringColor = "black",
+        classname=""
+    }
+) {
+
+    const avatarSizeOptions = [
+        {
+            size: "default",
+            heightAndWith: {
+                height: "12",
+                width: "12"
+            }
+        },
+        {
+            size: "xl",
+            heightAndWith: {
+                height: "[160px]",
+                width: "[160px]"
+            }
+        },
+    ]
+
+    if (avatarImg === "") {
+        avatarImg = defaultUserLogo;
+    }
+
     return (
-        <div className={`w-[160px] h-[160px] rounded-full overflow-hidden ring-4 ring-white ${classname}`}>
-            <Image 
-                src={src}
-                className={`w-full h-full object-cover ${classname}`}
-                alt={alt}
-            />
-        </div>
+        <>
+            {avatarSize === "default" && (
+                <div 
+                    className={`w-${avatarSizeOptions[0].heightAndWith.width} h-${avatarSizeOptions[0].heightAndWith.height} overflow-hidden ${ring === true ? "ring-4" : "ring-0"} ring-${ringColor} rounded-full ${classname}`}
+                >
+                    <Image 
+                        src={avatarImg}
+                        alt={altImg}
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+            )}
+            {avatarSize === "xl" && (
+                <div 
+                    className={`w-${avatarSizeOptions[1].heightAndWith.width} h-${avatarSizeOptions[1].heightAndWith.height} overflow-hidden ${ring === true ? "ring-4" : "ring-0"} ring-${ringColor} rounded-full ${classname}`}
+                >
+                    <Image 
+                        src={avatarImg}
+                        alt={altImg}
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+            )}
+        </>
     )
-} 
+}
