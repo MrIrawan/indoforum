@@ -2,9 +2,10 @@
 
 import { useState } from "react"
 
-import MessageButton from "../ui/ProfileButtons/MessageButton"
-import FollowButton from "../ui/ProfileButtons/FollowButton"
-import UnfollowButton from "../ui/ProfileButtons/UnfollowButton"
+import FollowButton from "@/components/ui/ProfileButtons/ProfileButtons"
+import UnfollowButton from "@/components/ui/ProfileButtons/UnfollowButton"
+import MessageButton from "@/components/ui/ProfileButtons/MessageButton"
+import SettingsButton from "@/components/ui/ProfileButtons/SettingsButton"
 
 export default function UserProfileButtons() {
     // useState for fetching data from API
@@ -22,8 +23,9 @@ export default function UserProfileButtons() {
                         <FollowButton />
                     )
                 }
+                <MessageButton />
             </div>
-            <MessageButton />
+            <SettingsButton />
         </div>
     )
 }

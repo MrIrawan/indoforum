@@ -1,12 +1,9 @@
-import BannerImageWithAvatar from "@/components/container/BannerImageWithAvatar/BannerImageWithAvatar";
-import UserProfileNameAndJob from "@/components/container/ProfileNameAndJob/ProfileNameAndJob";
-
+import UserProfileInfo from "@/components/container/ProfileInfo/ProfileInfo";
 
 export default function Home() {
   return (
     <>
-    <BannerImageWithAvatar />
-    <UserProfileNameAndJob />
+      <UserProfileInfo />
     </>
   );
 }
