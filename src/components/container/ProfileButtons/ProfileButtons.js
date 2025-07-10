@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-import FollowButton from "@/components/ui/ProfileButtons/ProfileButtons"
+import FollowButton from "@/components/ui/ProfileButtons/FollowButton"
 import UnfollowButton from "@/components/ui/ProfileButtons/UnfollowButton"
 import MessageButton from "@/components/ui/ProfileButtons/MessageButton"
 import SettingsButton from "@/components/ui/ProfileButtons/SettingsButton"

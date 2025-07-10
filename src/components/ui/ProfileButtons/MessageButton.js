@@ -1,4 +1,4 @@
-import Button from "../Button";
+import Button from "../button/Buttons";
 import { MessageCircleIcon } from "lucide-react";
 
 export default function MessageButton() {

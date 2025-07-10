@@ -1,4 +1,4 @@
-import Button from "../ui/Button";
+import Button from "../button/Buttons";
 import { UserPlusIcon } from "lucide-react";
 
 export default function FollowButton() {
