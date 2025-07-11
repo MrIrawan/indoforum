@@ -1,11 +1,5 @@
-"use client"
-
-import { useState } from "react"
-
-export default function UserProfileName() {
-    const [isName, isNotName] = useState(null);
-
+export default function UserProfileName({ userName = "" }) {
     return (
-        <h2 className="text-2xl font-m-bold capitalize">{isName ? isName : "Farrel Irawan"}</h2>
+        <h2 className="text-2xl font-m-bold capitalize">{ userName ? userName : "User did not write name" }</h2>
     )
 }

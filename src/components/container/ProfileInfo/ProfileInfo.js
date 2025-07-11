@@ -1,7 +1,3 @@
-"use client"
-
-import { useState } from "react"
-
 import {
     MapPinIcon,
     MailIcon,
@@ -10,27 +6,34 @@ import {
     Trash2Icon,
     GraduationCapIcon
 } from "lucide-react";
-import Button from "@/components/ui/button/Buttons";
 
-export default function UserProfileInfo() {
-    // useState to fetch user info and additional info from API
-    const [userInfo, setUserInfo] = useState(null);
-    const [additionalInfo, setAdditionalInfo] = useState(null);
+export default function UserProfileInfo({
+    currentLocation = "",
+    email = "",
+    jobPlace = ""
+}) {
     return (
         <>
         <div className="w-full pt-6">
             <ul className="flex flex-col gap-3">
                 <li className="flex items-center gap-2">
                     <MapPinIcon className="w-5 h-5 text-primary-color" />
-                    <p className="text-base font-m-semibold">Jakarta, Indonesia</p>
+                    <p className="text-base font-m-semibold">{ currentLocation ? currentLocation : "Unknown Location." }</p>
                 </li>
                 <li className="flex items-center gap-2">
                     <MailIcon className="w-5 h-5 text-primary-color" />
-                    <p className="text-base font-m-semibold">irawanssfarrel@mail.com</p>
+                    <p className="text-base font-m-semibold">{ email ? email : "Unknown Email." }</p>
                 </li>
                 <li className="flex items-center gap-2">
                     <BriefcaseBusinessIcon className="w-5 h-5 text-primary-color" />
-                    <p className="text-base font-m-medium">work at <span className="font-m-semibold">PT. DBS Bank</span></p>
+                    <p className="text-base font-m-medium">
+                        { jobPlace === "" && (
+                            <span className="font-m-semibold">Unknown Job Place.</span>
+                        ) }
+                        { jobPlace !== "" && (
+                            <span className="font-m-semibold">{ jobPlace }</span>
+                        )}
+                    </p>
                 </li>
             </ul>
         </div>

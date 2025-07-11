@@ -10,8 +10,15 @@ import UserProfileActivity from "../container/ProfileActivity/ProfileActivity";
 export default function UserProfilePage() {
     return (
         <UserProfileLayout>
-            <ProfileNameLayout />
-            <UserProfileInfo />
+            <ProfileNameLayout 
+                userName="Farrel Irawan"
+                userJob="Software Engineer | UI/UX Mastery"
+            />
+            <UserProfileInfo 
+                currentLocation="Jakarta, Indonesia"
+                email="budiwicaksono@mail.com"
+                jobPlace="Indoforum"
+            />
             <UserProfileActivity />
         </UserProfileLayout>
     )
