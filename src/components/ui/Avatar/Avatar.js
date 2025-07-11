@@ -37,7 +37,7 @@ export default function Avatar(
         <>
             {avatarSize === "default" && (
                 <div 
-                    className={`w-${avatarSizeOptions[0].heightAndWith.width} h-${avatarSizeOptions[0].heightAndWith.height} overflow-hidden ${ring === true ? "ring-4" : "ring-0"} ring-${ringColor} rounded-full ${classname}`}
+                    className={`w-12 h-12 overflow-hidden ${ring === true ? "ring-3" : "ring-0"} ring-${ringColor} rounded-full ${classname}`}
                 >
                     <Image 
                         src={avatarImg}
