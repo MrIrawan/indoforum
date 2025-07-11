@@ -9,6 +9,7 @@ export default function RegisterUser() {
         <AuthLayout
             title="Register"
             slug="Welcome! berikan informasi diri kamu."
+            variant="daftar"
         >
             <form className="w-full">
                 <InputGroupLayout>
@@ -48,7 +49,6 @@ export default function RegisterUser() {
                         <p className="text-base font-m-semibold text-white">daftar akun</p>
                     </Button>
                 </InputGroupLayout>
-                <p className="text-base font-m-semibold mt-4 text-center">Sudah punya akun? <Link href="/masuk" className="text-secondary-color">masuk disini.</Link></p>
             </form>
         </AuthLayout>
     )
