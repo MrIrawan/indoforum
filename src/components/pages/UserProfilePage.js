@@ -7,19 +7,24 @@ import ProfileNameLayout from "../layout/ProfileNameLayout";
 import UserProfileInfo from "../container/ProfileInfo/ProfileInfo";
 import UserProfileActivity from "../container/ProfileActivity/ProfileActivity";
 
-export default function UserProfilePage() {
+export default function UserProfilePage({
+    data
+}) {
     return (
         <UserProfileLayout>
             <ProfileNameLayout 
-                userName="Farrel Irawan"
-                userJob="Software Engineer | UI/UX Mastery"
+                userName={data.username}
+                userJob={data.userjob}
             />
             <UserProfileInfo 
-                currentLocation="Jakarta, Indonesia"
-                email="budiwicaksono@mail.com"
-                jobPlace="Indoforum"
+                currentLocation={data.UserProfileInfo.currentLocation}
+                email={data.UserProfileInfo.email}
+                jobPlace={data.UserProfileInfo.jobPlace}
             />
-            <UserProfileActivity />
+            <UserProfileActivity 
+                createdCount={data.UserProfileActivity.createdForums}
+                joinedCount={data.UserProfileActivity.joinedForums}
+            />
         </UserProfileLayout>
     )
 }
