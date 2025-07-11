@@ -12,7 +12,7 @@ export default function InputAndLabel({
     inputPlaceholder = ""
 }) {
     return (
-        <div className="flex flex-col gap-1.5 px-3">
+        <div className="flex flex-col gap-1.5">
             <CustomLabel
                 htmlFor={htmlFor}
                 classname={labelStyle}
