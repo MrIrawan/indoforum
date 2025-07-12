@@ -22,7 +22,7 @@ export default function ReadMore({ text, amountOfWord = 15, textStyle = "" }) {
                         {endText}
                     </span>
                     <span 
-                        className="text-primary-color ml-2 cursor-pointer"
+                        className="text-primary-color cursor-pointer"
                         onClick={() => setIsReadMore(!isReadMore)}
                     >
                         {isReadMore ? "read less" : "read more"}
