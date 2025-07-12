@@ -1,17 +1,12 @@
-"use client"
-
 import Image from "next/image"
 import indoforumLogo from "../../../public/images/indoforum-logo.svg"
-import Button from "@/components/ui/button/Buttons"
+import Button from "@/components/ui/button/Buttons";
 import {
-    SearchIcon,
     HomeIcon,
     MessageSquareTextIcon,
     UsersRoundIcon,
     MessageCircleQuestionIcon
-} from "lucide-react"
-import SearchBar from "@/components/container/SearchBar/SearchBar"
-import IconList from "@/components/container/IconList/IconList"
+} from "lucide-react";
 
 export default function PostLayout({ children }) {
     return (
@@ -26,9 +21,36 @@ export default function PostLayout({ children }) {
             <h4 className="text-base font-m-bold">Indoforum | discuss and share.</h4>
         </div>
             <div className="w-full h-16 bg-gray-200">
-                <IconList 
-                    listStyle="w-full flex items-center justify-around gap-2 py-1.5 h-full"
-                />
+                <ul className="w-full h-full flex items-center justify-around">
+                    <li>
+                        <Button
+                            link="/post"
+                        >
+                            <HomeIcon className="w-6 h-6" />
+                        </Button>
+                    </li>
+                    <li>
+                        <Button
+                            link="/post"
+                        >
+                            <MessageSquareTextIcon className="w-6 h-6" />
+                        </Button>
+                    </li>
+                    <li>
+                        <Button
+                            link="/post"
+                        >
+                            <UsersRoundIcon className="w-6 h-6" />
+                        </Button>
+                    </li>
+                    <li>
+                        <Button
+                            link="/post"
+                        >
+                            <MessageCircleQuestionIcon className="w-6 h-6" />
+                        </Button>
+                    </li>
+                </ul>
             </div>
             {children}
         </>
