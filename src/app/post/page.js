@@ -1,8 +1,6 @@
 "use client"
 
-import CardContent from "@/components/container/CardContent/CardContent"
-import CardFooter from "@/components/container/CardFooter/CardFooter"
-import CardHrader from "@/components/container/CardHeader/CardHeader"
+import PostCardPage from "@/components/pages/PostCardPage/PostCardPage"
 import SearchBar from "@/components/container/SearchBar/SearchBar"
 
 export default function PostPage() {
@@ -10,9 +8,7 @@ export default function PostPage() {
         <div className="h-screen mt-2">
             <SearchBar />
             <div className="h-full bg-green-400 mt-2">
-                <CardHrader />
-                <CardContent />
-                <CardFooter />
+                <PostCardPage />
             </div>
         </div>
     )

@@ -10,9 +10,11 @@ import {
     ShareIcon
 } from "lucide-react";
 
-export default function CardFooter() {
+export default function CardFooter({ likeCount = 0 }) {
 
     const [like, setLike] = useState(false);
+
+    const postLikeCount = likeCount;
 
     return (
         <div className="h-12 bg-white flex flex-col gap-1 px-3 py-1.5">
@@ -29,7 +31,7 @@ export default function CardFooter() {
                                 <ThumbsUpIcon className={`w-5 h-5 transition-colors duration-100 ease-in-out ${like && "text-primary-color"}`} />
                                 <p className="text-sm font-m-medium">Like Post</p>
                                 <span className="w-1.5 h-1.5 bg-primary-color rounded-full"></span>
-                                <p className="text-base font-m-medium">0</p>
+                                <p className="text-base font-m-medium">{like ? postLikeCount + 1 : postLikeCount}</p>
                             </span>
                         </Button>
                         <Button
