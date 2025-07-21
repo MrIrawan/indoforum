@@ -1,6 +1,6 @@
+"use client"
+
 import QuestionCard from "@/components/pages/QuestionCard/QuestionCard";
-import Avatar from "@/components/ui/Avatar/Avatar";
-import Button from "@/components/ui/button/Buttons";
 
 export default function QuestionsPage() {
 
