@@ -6,6 +6,9 @@ export default function QuestionFooter({ answeredCount = 0 }) {
                 <hr className="w-2 h-2 bg-blue-500 border-none rounded-full"/>
                 <p className="text-sm font-m-semibold">{answeredCount} User's</p>
             </div>
+            <div className="px-3 py-0.5 ring-2 rounded-full">
+                <p className="text-sm font-m-semibold">Answer</p>
+            </div>
         </div>
     )
 }
