@@ -18,7 +18,11 @@ export default function QuestionsPage() {
 
     return (
         <>
-            <QuestionCard data={dummyData}/>
+            <div className="flex flex-col gap-6 px-3 py-3">
+                <QuestionCard data={dummyData}/>
+                <QuestionCard data={dummyData}/>
+                <QuestionCard data={dummyData}/>
+            </div>
         </>
     )
 }
