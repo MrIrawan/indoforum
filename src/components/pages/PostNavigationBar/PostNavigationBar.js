@@ -7,7 +7,6 @@ import NavIconList from "@/components/container/NavIconList/NavIconList";
 export default function PostNavigationBar() {
     return (
         <NavbarLayout>
-            <LogoAndSlug />
             <div className="w-full py-1">
                 <SearchBar />
             </div>

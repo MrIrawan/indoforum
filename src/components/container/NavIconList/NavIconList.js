@@ -8,7 +8,7 @@ import {
 
 export default function NavIconList() {
     return (
-        <div className="bg-gray-100 w-full h-11">
+        <div className="bg-gray-300 w-full h-11">
             <ul className="w-full h-full flex items-center justify-around">
                 <li className="flex items-center justify-center">
                     <Button
