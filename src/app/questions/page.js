@@ -1,5 +1,8 @@
 "use client"
 
+import LogoAndSlug from "@/components/container/LogoAndSlug/LogoAndSlug";
+import NavIconList from "@/components/container/NavIconList/NavIconList";
+import SearchBar from "@/components/container/SearchBar/SearchBar";
 import QuestionCard from "@/components/pages/QuestionCard/QuestionCard";
 
 export default function QuestionsPage() {
@@ -18,6 +21,9 @@ export default function QuestionsPage() {
 
     return (
         <>
+            <LogoAndSlug />
+            <SearchBar />
+            <NavIconList />
             <div className="flex flex-col gap-6 px-3 py-3">
                 <QuestionCard data={dummyData}/>
                 <QuestionCard data={dummyData}/>
