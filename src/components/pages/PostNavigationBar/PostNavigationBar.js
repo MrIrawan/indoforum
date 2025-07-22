@@ -8,7 +8,7 @@ export default function PostNavigationBar() {
     return (
         <NavbarLayout>
             <LogoAndSlug />
-            <div className="w-full py-4">
+            <div className="w-full py-1">
                 <SearchBar />
             </div>
             <NavIconList />
